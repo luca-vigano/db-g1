@@ -21,3 +21,8 @@ SELECT *
 FROM prodotti 
 WHERE EXTRACT(YEAR FROM data_attivazione) = 2017
 AND (in_produzione = TRUE OR in_commercio = TRUE);
+
+-------ES 5 ---------
+
+SELECT fatture.importo, fornitori.denominazione FROM fatture
+JOIN fornitori ON fatture.numero_fornitore = fornitori.numero_fornitore WHERE fatture.importo <1000
