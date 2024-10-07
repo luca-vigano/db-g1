@@ -26,3 +26,10 @@ AND (in_produzione = TRUE OR in_commercio = TRUE);
 
 SELECT fatture.importo, fornitori.denominazione FROM fatture
 JOIN fornitori ON fatture.numero_fornitore = fornitori.numero_fornitore WHERE fatture.importo <1000
+
+
+-------ES 6 ---------
+
+SELECT fatture.importo, fatture.numero_fattura, fatture.data_fattura, fatture.iva, fornitori.denominazione FROM fatture
+JOIN fornitori ON fatture.numero_fornitore = fornitori.numero_fornitore
+
